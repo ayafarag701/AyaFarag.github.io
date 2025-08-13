@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aya Farag – UI/UX Designer Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Poppins", "Inter", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Noto Sans", "Helvetica Neue", "Arial", "sans-serif"],
+          },
+          colors: {
+            pastelMint: "#F28B82",    // Pastel Red
+            pastelPeach: "#FBB1A8",   // Soft Peach Red
+            pastelLavender: "#FBC4AB",// Light Coral
+            pastelBlue: "#FFD6D1",    // Very Light Red
+            pastelPink: "#FFE5E0",    // Pink Tint
+            ink: "#0D0D0D",           // Deep Red Ink
+            // Navy Ink
+
+
+
+
+          },
+          boxShadow: {
+            soft: "0 10px 30px rgba(31,41,55,0.08)",
+          },
+          borderRadius: {
+            '2xl': '1rem',
+          }
+        },
+      },
+    };
+  </script>
+
+  <!-- Animate.css for simple reveal effects -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Open Graph / SEO basics -->
+  <meta name="description"
+    content="Portfolio of Aya Farag — UI/UX Designer. Projects, skills, services, and contact." />
+  <meta property="og:title" content="Aya Farag – UI/UX Designer" />
+  <meta property="og:description" content="Modern, clean, minimal portfolio with pastel vibes." />
+  <meta property="og:type" content="website" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Simple polygon mask option for avatar */
+    .polygon-mask {
+      -webkit-clip-path: polygon(25% 0, 100% 0, 75% 100%, 0 100%);
+      clip-path: polygon(25% 0, 100% 0, 75% 100%, 0 100%);
+    }
+  </style>
+</head>
+
+<body class="font-sans text-ink bg-white">
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 backdrop-blur bg-white/70 border-b border-black/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+      <a href="#hero" class="text-lg font-semibold">Aya <span class="text-ink/60">Farag</span></a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#about" class="hover:text-ink/70">About</a>
+        <a href="#education" class="hover:text-ink/70">Education</a>
+        <a href="#skills" class="hover:text-ink/70">Skills</a>
+        <a href="#services" class="hover:text-ink/70">Services</a>
+        <a href="#projects" class="hover:text-ink/70">Projects</a>
+        <a href="#achievements" class="hover:text-ink/70">Achievements</a>
+        <a href="#contact" class="hover:text-ink/70">Contact</a>
+      </nav>
+      <a href="#projects"
+        class="md:inline-flex hidden px-4 py-2 rounded-2xl bg-pastelLavender/70 hover:bg-pastelLavender transition shadow-soft">View
+        My Work</a>
+      <!-- Mobile menu toggle (no JS: anchor jump) -->
+      <a href="#mobile" class="md:hidden" aria-label="Open menu"><i class="fa-solid fa-bars"></i></a>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile" class="md:hidden border-b border-black/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 grid grid-cols-2 gap-4 text-sm">
+      <a href="#about" class="p-3 rounded-xl bg-pastelBlue/40 hover:bg-pastelBlue/60">About</a>
+      <a href="#education" class="p-3 rounded-xl bg-pastelPeach/40 hover:bg-pastelPeach/60">Education</a>
+      <a href="#skills" class="p-3 rounded-xl bg-pastelMint/40 hover:bg-pastelMint/60">Skills</a>
+      <a href="#services" class="p-3 rounded-xl bg-pastelPink/40 hover:bg-pastelPink/60">Services</a>
+      <a href="#projects" class="p-3 rounded-xl bg-pastelLavender/40 hover:bg-pastelLavender/60">Projects</a>
+      <a href="#achievements" class="p-3 rounded-xl bg-pastelBlue/40 hover:bg-pastelBlue/60">Achievements</a>
+      <a href="#contact" class="p-3 rounded-xl bg-pastelPeach/40 hover:bg-pastelPeach/60">Contact</a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section id="hero" class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-pastelPeach via-pastelPink to-pastelLavender opacity-60"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
+      <div class="animate__animated animate__fadeInUp">
+        <p class="uppercase tracking-widest text-xs md:text-sm text-ink/70">
+          UI/UX Designer • Flutter Developer
+        </p>
+
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-semibold leading-tight mt-3">
+          Aya Farag
+        </h1>
+
+        <p class="mt-5 text-ink/80 max-w-xl">
+          Crafting beautiful, functional, and user-friendly apps from concept to code.
+          With a passion for clean design and smooth interactions, I blend UI/UX expertise with Flutter development to
+          deliver engaging mobile experiences.
+        </p>
+
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a href="https://drive.google.com/file/d/1fqsWEico621Elqf3EbHv92N2BqYdixtA/view?usp=drive_link"
+            target="_blank" class="px-5 py-3 rounded-2xl bg-ink text-white hover:opacity-90 transition shadow-soft">
+            Download CV
+          </a>
+
+          <a href="#contact"
+            class="px-5 py-3 rounded-2xl bg-white/70 hover:bg-white transition shadow-soft border border-black/5">Contact
+            Me</a>
+        </div>
+        <!-- Socials -->
+        <div class="mt-8 flex items-center gap-4 text-xl">
+          <a class="p-3 rounded-full bg-white/80 hover:-translate-y-1 transition transform shadow-soft"
+            href="https://github.com/ayafarag701" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a class="p-3 rounded-full bg-white/80 hover:-translate-y-1 transition transform shadow-soft"
+            href="https://www.linkedin.com/in/aya-farag-767b65264" aria-label="LinkedIn"><i
+              class="fab fa-linkedin"></i></a>
+          <a class="p-3 rounded-full bg-white/80 hover:-translate-y-1 transition transform shadow-soft"
+            href="https://www.behance.net/ayafarag12" aria-label="Behance"><i class="fab fa-behance"></i></a>
+          <a class="p-3 rounded-full bg-white/80 hover:-translate-y-1 transition transform shadow-soft"
+            href="mailto:ayafarag701@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center animate__animated animate__fadeInUp animate__delay-1s">
+        <!-- Switch circle / polygon by toggling classes -->
+        <div
+          class="w-56 h-56 md:w-72 md:h-72 rounded-full polygon-mask overflow-hidden ring-8 ring-white/60 shadow-soft bg-white/40">
+          <img src="Aya Farag.jpg" alt="Aya Farag portrait" class="w-full h-full object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate__animated animate__fadeInUp">
+
+      <h2 class="text-3xl md:text-4xl font-semibold">About Me</h2>
+
+      <p class="mt-4 text-ink/80 leading-relaxed">
+        Bringing ideas to life with <strong>UI/UX</strong> and <strong>Flutter</strong>.
+        I’m <strong>Aya Farag</strong>, a designer and developer passionate about turning creative concepts into
+        powerful, user-friendly digital products.
+      </p>
+
+      <p class="mt-4 text-ink/80 leading-relaxed">
+        My journey began with a curiosity about how great designs and apps are made — a curiosity that grew into a craft
+        of building intuitive UIs, seamless interactions, and smooth performance across devices. By blending design
+        principles with Flutter, I create experiences that are both beautiful and highly usable.
+      </p>
+
+    </div>
+  </section>
+
+
+
+
+
+  <!-- Education -->
+  <section id="education" class="py-20 bg-pastelBlue/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-semibold mb-10">Education</h2>
+      <div class="relative pl-8 border-l-2 border-pastelLavender/60 space-y-10">
+
+        <!-- Computer Science and Artificial Intelligence -->
+        <div class="animate__animated animate__fadeInUp">
+          <span class="absolute -left-3.5 mt-1 w-7 h-7 rounded-full ring-4 ring-white overflow-hidden">
+            <img src="Helwan.jpg" alt="Computer Science" class="w-full h-full object-cover">
+          </span>
+          <div class="bg-white rounded-2xl p-6 shadow-soft">
+            <h3 class="font-semibold">Bachelor in Computer Science and Artificial Intelligence</h3>
+            <p class="text-sm text-ink/70">Helwan University • 2022 – 2026</p>
+          </div>
+
+        </div>
+
+        <!-- Digital Egypt Pioneers Initiative -->
+        <div class="animate__animated animate__fadeInUp animate__delay-1s">
+          <span class="absolute -left-3.5 mt-1 w-7 h-7 rounded-full ring-4 ring-white overflow-hidden">
+            <img src="Depi.png" alt="Digital Egypt Pioneers Initiative" class="w-full h-full object-cover">
+          </span>
+          <div class="bg-white rounded-2xl p-6 shadow-soft">
+            <h3 class="font-semibold">Flutter Development Full Training Program</h3>
+            <p class="text-sm text-ink/70">Digital Egypt Pioneers Initiative • June 2025 – December 2025</p>
+          </div>
+        </div>
+
+        <!-- NTI UI/UX Program -->
+        <div class="animate__animated animate__fadeInUp animate__delay-2s">
+          <span class="absolute -left-3.5 mt-1 w-7 h-7 rounded-full ring-4 ring-white overflow-hidden">
+            <img src="logo.png" alt="NTI UI/UX Program" class="w-full h-full object-cover">
+          </span>
+          <div class="bg-white rounded-2xl p-6 shadow-soft">
+            <h3 class="font-semibold">User Interface and User Experience Full Training Program</h3>
+            <p class="text-sm text-ink/70">National Technology Institute • July 2025 – August 2025</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Skills -->
+  <section id="skills" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-semibold mb-10">Skills</h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Mobile Development -->
+        <div class="space-y-6 animate__animated animate__fadeInUp">
+          <h3 class="text-xl font-semibold mb-4">Mobile Development</h3>
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium">Flutter</span>
+              <span class="text-sm text-ink/60">85%</span>
+            </div>
+            <div class="mt-2 h-3 rounded-full bg-ink/10">
+              <div class="h-3 rounded-full bg-pastelMint" style="width: 85%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium">Dart</span>
+              <span class="text-sm text-ink/60">80%</span>
+            </div>
+            <div class="mt-2 h-3 rounded-full bg-ink/10">
+              <div class="h-3 rounded-full bg-pastelPeach" style="width: 80%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium">State Management</span>
+              <span class="text-sm text-ink/60">75%</span>
+            </div>
+            <div class="mt-2 h-3 rounded-full bg-ink/10">
+              <div class="h-3 rounded-full bg-pastelLavender" style="width: 75%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium">API Integration</span>
+              <span class="text-sm text-ink/60">80%</span>
+            </div>
+            <div class="mt-2 h-3 rounded-full bg-ink/10">
+              <div class="h-3 rounded-full bg-pastelBlue" style="width: 80%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium">Firebase</span>
+              <span class="text-sm text-ink/60">70%</span>
+            </div>
+            <div class="mt-2 h-3 rounded-full bg-ink/10">
+              <div class="h-3 rounded-full bg-pastelPink" style="width: 70%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium">UI Integration</span>
+              <span class="text-sm text-ink/60">85%</span>
+            </div>
+            <div class="mt-2 h-3 rounded-full bg-ink/10">
+              <div class="h-3 rounded-full bg-pastelMint" style="width: 85%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- UI/UX -->
+        <div class="space-y-6 animate__animated animate__fadeInUp animate__delay-1s">
+          <h3 class="text-xl font-semibold mb-4">UI/UX Design</h3>
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium">UI/UX</span>
+              <span class="text-sm text-ink/60">90%</span>
+            </div>
+            <div class="mt-2 h-3 rounded-full bg-ink/10">
+              <div class="h-3 rounded-full bg-pastelMint" style="width: 90%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium">Wireframing</span>
+              <span class="text-sm text-ink/60">85%</span>
+            </div>
+            <div class="mt-2 h-3 rounded-full bg-ink/10">
+              <div class="h-3 rounded-full bg-pastelPeach" style="width: 85%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium">Prototyping</span>
+              <span class="text-sm text-ink/60">80%</span>
+            </div>
+            <div class="mt-2 h-3 rounded-full bg-ink/10">
+              <div class="h-3 rounded-full bg-pastelLavender" style="width: 80%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium">User Research</span>
+              <span class="text-sm text-ink/60">80%</span>
+            </div>
+            <div class="mt-2 h-3 rounded-full bg-ink/10">
+              <div class="h-3 rounded-full bg-pastelBlue" style="width: 80%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium">Accessibility</span>
+              <span class="text-sm text-ink/60">75%</span>
+            </div>
+            <div class="mt-2 h-3 rounded-full bg-ink/10">
+              <div class="h-3 rounded-full bg-pastelPink" style="width: 75%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium">Figma / Adobe XD</span>
+              <span class="text-sm text-ink/60">90%</span>
+            </div>
+            <div class="mt-2 h-3 rounded-full bg-ink/10">
+              <div class="h-3 rounded-full bg-pastelLavender" style="width: 90%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend / Programming -->
+        <div class="space-y-6 animate__animated animate__fadeInUp animate__delay-2s">
+          <h3 class="text-xl font-semibold mb-4">Backend Development</h3>
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium">.NET</span>
+              <span class="text-sm text-ink/60">80%</span>
+            </div>
+            <div class="mt-2 h-3 rounded-full bg-ink/10">
+              <div class="h-3 rounded-full bg-pastelBlue" style="width: 80%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium">C#</span>
+              <span class="text-sm text-ink/60">85%</span>
+            </div>
+            <div class="mt-2 h-3 rounded-full bg-ink/10">
+              <div class="h-3 rounded-full bg-pastelMint" style="width: 85%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium">SQL</span>
+              <span class="text-sm text-ink/60">80%</span>
+            </div>
+            <div class="mt-2 h-3 rounded-full bg-ink/10">
+              <div class="h-3 rounded-full bg-pastelPeach" style="width: 80%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium">APIs</span>
+              <span class="text-sm text-ink/60">75%</span>
+            </div>
+            <div class="mt-2 h-3 rounded-full bg-ink/10">
+              <div class="h-3 rounded-full bg-pastelLavender" style="width: 75%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium">Entity Framework</span>
+              <span class="text-sm text-ink/60">80%</span>
+            </div>
+            <div class="mt-2 h-3 rounded-full bg-ink/10">
+              <div class="h-3 rounded-full bg-pastelPink" style="width: 80%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium">Version Control (Git)</span>
+              <span class="text-sm text-ink/60">85%</span>
+            </div>
+            <div class="mt-2 h-3 rounded-full bg-ink/10">
+              <div class="h-3 rounded-full bg-pastelBlue" style="width: 85%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Services -->
+  <section id="services" class="py-20 bg-pastelPink/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-semibold mb-10">Services</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- App Design -->
+        <div class="p-6 rounded-2xl bg-white shadow-soft border border-black/5 animate__animated animate__fadeInUp">
+          <div class="w-12 h-12 rounded-2xl bg-pastelMint/50 flex items-center justify-center">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
+          <h3 class="mt-4 font-semibold">App Design</h3>
+          <p class="mt-2 text-ink/80">iOS & Android UI with smooth flows and accessible patterns.</p>
+        </div>
+
+        <!-- Website Design -->
+        <div
+          class="p-6 rounded-2xl bg-white shadow-soft border border-black/5 animate__animated animate__fadeInUp animate__delay-1s">
+          <div class="w-12 h-12 rounded-2xl bg-pastelLavender/50 flex items-center justify-center">
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <h3 class="mt-4 font-semibold">Website Design</h3>
+          <p class="mt-2 text-ink/80">Responsive, modern websites that feel light and fast.</p>
+        </div>
+
+        <!-- UX Audit -->
+        <div
+          class="p-6 rounded-2xl bg-white shadow-soft border border-black/5 animate__animated animate__fadeInUp animate__delay-2s">
+          <div class="w-12 h-12 rounded-2xl bg-pastelPeach/50 flex items-center justify-center">
+            <i class="fa-solid fa-user-check"></i>
+          </div>
+          <h3 class="mt-4 font-semibold">UX Audit</h3>
+          <p class="mt-2 text-ink/80">Heuristic evaluation & quick wins to improve conversion.</p>
+        </div>
+
+        <!-- Flutter App Development -->
+        <!-- App Development -->
+        <div
+          class="p-6 rounded-2xl bg-white shadow-soft border border-black/5 animate__animated animate__fadeInUp animate__delay-3s">
+          <div class="w-12 h-12 rounded-2xl bg-pastelBlue/50 flex items-center justify-center">
+            <!-- أيقونة Development -->
+            <i class="fa-solid fa-laptop-code text-2xl"></i>
+          </div>
+          <h3 class="mt-4 font-semibold">Flutter App Development</h3>
+          <p class="mt-2 text-ink/80">Cross-platform mobile apps with beautiful UI and smooth performance.</p>
+        </div>
+
+
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between gap-4 mb-8">
+        <h2 class="text-3xl md:text-4xl font-semibold">Projects</h2>
+        <a href="#contact"
+          class="hidden sm:inline-flex px-4 py-2 rounded-2xl bg-pastelBlue/70 hover:bg-pastelBlue transition shadow-soft">Work
+          with me</a>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project Card -->
+        <article
+          class="group bg-white rounded-2xl shadow-soft overflow-hidden border border-black/5 animate__animated animate__fadeInUp">
+          <div class="aspect-[16/10] overflow-hidden">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition" src="Cover.webp" alt="Project 1" />
+          </div>
+          <div class="p-5">
+            <h3 class="font-semibold">Moodoo – Discover Music, Discover Yourself</h3>
+            <p class="mt-1 text-sm text-ink/70">A music app that adapts to your mood to help you discover songs that
+              match your feelings.</p>
+            <a href="https://www.behance.net/gallery/231680245/Moodoo-Discover-Music-Discover-Yourself"
+              class="mt-3 inline-flex items-center gap-2 text-sm font-medium hover:underline">View Details <i
+                class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section id="achievements" class="py-20 bg-pastelMint/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-semibold mb-8">Achievements</h2>
+      <div class="flex flex-wrap gap-4">
+        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-soft border border-black/5">
+          Participated in ECPC
+        </span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold text-ink">Contact Me</h2>
+      <p class="mt-4 text-lg text-ink/80">
+        Have a project in mind or just want to say hi?
+        I’d love to hear from you!
+      </p>
+
+      <!-- أيقونات التواصل -->
+      <div class="mt-6 flex justify-center gap-3 text-xl">
+        <a class="p-3 rounded-full bg-white/80 hover:-translate-y-1 transition transform shadow-soft"
+          href="https://github.com/ayafarag701" aria-label="GitHub"><i class="fab fa-github"></i></a>
+
+        <a class="p-3 rounded-full bg-pastelBlue/40 hover:bg-pastelBlue/60 transition shadow-soft"
+          href="https://www.linkedin.com/in/aya-farag-767b65264"><i class="fab fa-linkedin"></i></a>
+        <a class="p-3 rounded-full bg-pastelMint/40 hover:bg-pastelMint/60 transition shadow-soft"
+          href="https://www.behance.net/ayafarag12"><i class="fab fa-behance"></i></a>
+        <a class="p-3 rounded-full bg-pastelPink/40 hover:bg-pastelPink/60 transition shadow-soft"
+          href="https://wa.me/201153246333" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a class="p-3 rounded-full bg-white/80 hover:-translate-y-1 transition transform shadow-soft"
+          href="mailto:ayafarag701@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+
+      </div>
+
+      <!-- الفورم -->
+      <form id="contactForm" class="mt-10 bg-white p-6 rounded-2xl shadow-soft border border-black/5">
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="text-sm font-medium">Name</label>
+            <input type="text" name="name" placeholder="Your name" required
+              class="mt-1 w-full rounded-xl border border-black/10 px-4 py-3 outline-none focus:ring-2 focus:ring-red-400" />
+          </div>
+          <div>
+            <label class="text-sm font-medium">Email</label>
+            <input type="email" name="email" placeholder="you@mail.com" required
+              class="mt-1 w-full rounded-xl border border-black/10 px-4 py-3 outline-none focus:ring-2 focus:ring-red-400" />
+          </div>
+        </div>
+        <div class="mt-4">
+          <label class="text-sm font-medium">Message</label>
+          <textarea name="message" placeholder="Tell me about your project…" rows="5" required
+            class="mt-1 w-full rounded-xl border border-black/10 px-4 py-3 outline-none focus:ring-2 focus:ring-red-400"></textarea>
+        </div>
+        <button type="submit"
+          class="mt-5 w-full px-5 py-3 rounded-2xl bg-ink text-white hover:opacity-90 transition shadow-soft">
+          Send Message
+        </button>
+
+        <!-- مكان الرسالة -->
+        <p id="formMessage" class="mt-4 text-green-600 hidden">✅ Your message has been sent successfully!</p>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", async function (event) {
+      event.preventDefault();
+
+      const form = event.target;
+      const formData = new FormData(form);
+      const messageEl = document.getElementById("formMessage");
+
+      try {
+        await fetch("https://formspree.io/f/xyzpvgob", {
+          method: "POST",
+          body: formData,
+          headers: { Accept: "application/json" }
+        });
+
+        // إظهار رسالة النجاح
+        messageEl.classList.remove("hidden");
+
+        // مسح بيانات الفورم
+        form.reset();
+
+        // إخفاء الرسالة بعد 4 ثواني
+        setTimeout(() => {
+          messageEl.classList.add("hidden");
+        }, 4000);
+
+      } catch (error) {
+        console.error("Error:", error);
+        alert("❌ Something went wrong. Please try again.");
+      }
+    });
+  </script>
+
+
+  </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-black/5 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-sm">© 2025 Aya Farag – All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <!-- Tiny in-view reveal (Intersection Observer) for graceful entrance) -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('section:not(#hero) .animate__animated').forEach((el) => observer.observe(el));
+  </script>
+</body>
+
+</html>
